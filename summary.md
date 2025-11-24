@@ -1,6 +1,6 @@
 # [piquel.fr docs](/)
 
-## API
+## [API](/api/index.md)
 
 [Auth](/api/auth.md)
 [Profile](/api/profile.md)
