@@ -33,6 +33,7 @@ interface MailAccount {
     num_messages: number;
     num_unread: number;
   }[];
+  shares: string[];
 }
 ```
 
@@ -55,3 +56,11 @@ For example:
   ]
 }
 ```
+
+### `PUT /{email}/share`
+
+Will share the email account with the user specified in the `user` query parameter. This parameter must exist or there will be an error.
+
+### `DELETE /{email}/share`
+
+Will stop sharing the email account with the user specified in the `user` query parameter. This parameter must exist or there will be an error.
