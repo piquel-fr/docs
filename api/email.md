@@ -23,15 +23,35 @@ Will delete the specified email account.
 
 ### `GET /email/{email}` - Get account info
 
-Returns a JSON object.
-
+Returns a JSON object that complies with the follow type:
 ```ts
-{
-    email: string,
-    name: string,
-    mailboxex: []{
-        name: string,
-        num_messages: number,
-        num_unread: number,
-    },
+interface MailAccount {
+  email: string;
+  name: string;
+  mailboxes: {
+    name: string;
+    num_messages: number;
+    num_unread: number;
+  }[];
 }
+```
+
+For example:
+```json
+{
+  "email": "user@example.com",
+  "name": "Jane Doe",
+  "mailboxes": [
+    {
+      "name": "Inbox",
+      "num_messages": 42,
+      "num_unread": 5
+    },
+    {
+      "name": "Spam",
+      "num_messages": 12,
+      "num_unread": 0
+    }
+  ]
+}
+```
