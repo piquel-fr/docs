@@ -18,25 +18,9 @@ The following fields are required:
 - `password`: The password of the mail account.
 
 ### `DELETE /email/{email}` - Delete email account
-
-Will delete the specified email account.
-
 ### `GET /email/{email}` - Get account info
 
-Returns a JSON object that complies with the follow type:
-```ts
-interface MailAccount {
-  email: string;
-  name: string;
-  mailboxes: {
-    name: string;
-    num_messages: number;
-    num_unread: number;
-  }[];
-  shares: string[];
-}
-```
-
+Returns a JSON object that complies with account info.
 For example:
 ```json
 {
