@@ -40,8 +40,8 @@ interface MailAccount {
 For example:
 ```json
 {
-  "email": "user@example.com",
-  "name": "Jane Doe",
+  "email": "piquel@piquel.fr",
+  "name": "Piquel",
   "mailboxes": [
     {
       "name": "Inbox",
@@ -59,8 +59,8 @@ For example:
 
 ### `PUT /email/{email}/share`
 
-Will share the email account with the user specified in the `user` query parameter. This parameter must exist or there will be an error.
+Will share the email account with the user specified in the required `user` query parameter.
 
 ### `DELETE /email/{email}/share`
 
-Will stop sharing the email account with the user specified in the `user` query parameter. This parameter must exist or there will be an error.
+Will stop sharing the email account with the user specified in the required `user` query parameter.
